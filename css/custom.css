@@ -463,11 +463,11 @@ section {
 }
 
 @media (min-width: 992px) {
-    #services .row > .col-md-4 {
+    #services .container > .row > .col-md-4 {
         height: 480px;
     }
 
-    #services .row > .col-md-4:not(:first-child) {
+    #services .container > .row > .col-md-4:not(:first-child) {
         border-left: 1px solid #1D2731;
     }
 
