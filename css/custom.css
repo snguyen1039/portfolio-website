@@ -245,8 +245,18 @@ section {
 }
 
 /* ---------- NAVIGATION BAR ---------- */
-.nav li {
+.navbar-container .nav li {
     font-size: 18px
+}
+
+.navbar-container .logo {
+    float: left;
+    padding: 15px;
+}
+
+.navbar-container .logo img {
+    width: 50px;
+    box-shadow: 0 0 6px #2c2c2c;
 }
 
 /* ----- Hamburger Menu ----- */
@@ -301,7 +311,7 @@ section {
 }
 
 @media (min-width: 768px) {
-    .navbar-container {
+    .navbar-container .nav {
         display: block !important
     }
 }
@@ -330,8 +340,13 @@ section {
         height: 65px
     }
 
-    .navbar-container {
+    .navbar-container .logo {
+        padding: 5px;
+    }
+
+    .navbar-container .nav {
         display: none;
+        margin-top: 65px;
         position: relative
     }
 }
@@ -459,6 +474,9 @@ section {
         padding-top: 15px
     }
 
+    #services .tools {
+        margin-top: 20px
+    }
 }
 
 /* ---------- PORTFOLIO ---------- */

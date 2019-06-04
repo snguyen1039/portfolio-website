@@ -29,11 +29,11 @@ $(document).ready(function(){
     $('#hamburger').click(function(e){
         e.preventDefault();
 
-        if ($('.navbar-container').is(':visible')) {
-            $('.navbar-container').hide();
+        if ($('.navbar-container .nav').is(':visible')) {
+            $('.navbar-container .nav').hide();
         }
         else {
-            $('.navbar-container').show();
+            $('.navbar-container .nav').show();
         }
     });
 });
