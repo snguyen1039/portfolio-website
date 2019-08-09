@@ -17,6 +17,8 @@ h1, h2, h3, p, a {
 }
 
 p {
+    font-size: 16px;
+    line-height: 20px;
     margin-top: 0;
 }
 
@@ -25,7 +27,7 @@ a {
 }
 
 a:hover {
-    color: #CDCDCD
+    color: #E1E1E1
 }
 
 /* ---------- COLORS ---------- */
@@ -34,7 +36,7 @@ a:hover {
 }
 
 .light-grey {
-    color: #CDCDCD
+    color: #E1E1E1
 }
 
 .blueberry {
@@ -46,7 +48,7 @@ a:hover {
 }
 
 .bg-light-grey {
-    background-color: #CDCDCD
+    background-color: #E1E1E1
 }
 
 .bg-blueberry {
@@ -67,7 +69,7 @@ a:hover {
 }
 
 .btn-blueberry:hover {
-    background-color: #CDCDCD;
+    background-color: #E1E1E1;
     color: #1D2731
 }
 
@@ -77,7 +79,7 @@ a:hover {
 }
 
 .btn-ivory-black:hover {
-    background-color: #CDCDCD;
+    background-color: #E1E1E1;
     color: #1D2731
 }
 
@@ -91,11 +93,8 @@ a:hover {
 }
 
 .hero-bg-img {
-    background: url(../images/hero-bg.jpg) no-repeat;
+    background: url(../images/hero-bg.jpg) center no-repeat;
     background-size: cover;
-    background-position: center;
-    background-color: rgba(107, 122, 143, .7);
-    background-blend-mode: multiply;
 }
 
 /* ---------- SECTIONS ---------- */
@@ -261,7 +260,8 @@ section {
 
 /* ----- Hamburger Menu ----- */
 .nav-trigger {
-    display: none
+    background-color: #6B7A8F;
+    display: none;
 }
 
 .nav-trigger #hamburger {
@@ -340,14 +340,17 @@ section {
         height: 65px
     }
 
+    .navbar-container nav {
+        top: 65px
+    }
+
     .navbar-container .logo {
         padding: 5px;
     }
 
-    .navbar-container .nav {
+    .navbar-container .navbar-nav {
         display: none;
-        margin-top: 65px;
-        position: relative
+        position: relative;
     }
 }
 
@@ -462,20 +465,6 @@ section {
     line-height: 24px
 }
 
-@media (min-width: 992px) {
-    #services .container > .row > .col-md-4 {
-        height: 480px;
-    }
-
-    #services .container > .row > .col-md-4:not(:first-child) {
-        border-left: 1px solid #1D2731;
-    }
-
-    #services .text-center > div.skills {
-        height: 70px
-    }
-}
-
 @media (max-width: 991px) {
     #services .row > .col-md-4:not(:first-child) > .service {
         border-top: 1px solid #1D2731;
@@ -485,6 +474,55 @@ section {
     #services .tools {
         margin-top: 20px
     }
+}
+
+/* ---------- SKILLS ---------- */
+#skills {
+    background: url(../images/skills-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#skills h3 {
+    color: white;
+    text-align: center;
+}
+
+#skills p {
+    color: #FFF;
+    margin-bottom: 0
+}
+
+#skills .skillsets {
+    margin-top: 40px
+}
+
+#skills .skill {
+    margin-bottom: 20px;
+}
+
+#skills .skill-text {
+    float: left;
+    padding-right: 15px;
+    text-align: right;
+    width: 150px;
+}
+
+#skills .progress-bar {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#skills .progress-bar > .my-progress {
+    background: #E1E1E1;
+    float: left;
+    height: 20px;
+    width: 1%;
+}
+
+#skills .progress-bar > .percentage {
+    float: left;
+    margin-left: 10px;
 }
 
 /* ---------- PORTFOLIO ---------- */
@@ -543,11 +581,6 @@ section {
 
 .salary-estimator-bg-img {
     background: url(../images/projects/salary-estimator.png) top no-repeat;
-    background-size: cover;
-}
-
-.tetrisification-bg-img {
-    background: url(../images/projects/tetrisification.png) top no-repeat;
     background-size: cover;
 }
 
@@ -652,7 +685,7 @@ footer .contact-info {
 }
 
 .social-media-icons a:hover i {
-    color: #CDCDCD
+    color: #E1E1E1
 }
 
 footer ul.shortcuts li {

@@ -26,15 +26,18 @@ $(document).ready(function(){
         $('.download-game').hide();
     }
 
+    // Hamburger slide toggle
     $('#hamburger').click(function(e){
         e.preventDefault();
+        $('.navbar-container .nav').slideToggle(500);
+    });
 
-        if ($('.navbar-container .nav').is(':visible')) {
-            $('.navbar-container .nav').hide();
-        }
-        else {
-            $('.navbar-container .nav').show();
-        }
+    // Progress Bar Animation
+    $('.skillsets > .skill').each(function(){
+        var skill = $(this).attr('id');
+        var percentage =  $(this).data('ref');
+
+        progressBar(skill, percentage);
     });
 });
 
@@ -45,5 +48,21 @@ $(window).resize(function(){
 function vhInSafari() {
     if (/Safari/i.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor) && !/Mobi|Android/i.test(navigator.userAgent)) {
         $('#hero').css('height', $(window).height() + 'px');
+    }
+}
+
+function progressBar(skill, progress) {
+    var skillBar = $('#' + skill + ' .my-progress');
+    var skillPercentage = $('#' + skill + ' .percentage');
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= progress) {
+            clearInterval(id);
+        } else {
+            width++;
+            skillBar.css('width', width + '%');
+            skillPercentage.text(width + '%');
+        }
     }
 }
