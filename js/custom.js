@@ -32,13 +32,6 @@ $(document).ready(function(){
         $('.navbar-container .nav').slideToggle(500);
     });
 
-    // Progress Bar Animation
-    $('.skillsets > .skill').each(function(){
-        var skill = $(this).attr('id');
-        var percentage =  $(this).data('ref');
-
-        progressBar(skill, percentage);
-    });
 });
 
 $(window).resize(function(){

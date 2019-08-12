@@ -205,6 +205,24 @@ section {
     min-width: 160px;
 }
 
+ul.plus-list {
+    list-style: none;
+}
+
+ul.plus-list li {
+    display: table;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul.plus-list li:before {
+    content: "+";
+    display: table-cell;
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
 @media (max-width: 991px) {
     .custom-header {
         font-size: 50px;
@@ -484,6 +502,8 @@ section {
 
 #skills h3 {
     color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -523,6 +543,15 @@ section {
 #skills .progress-bar > .percentage {
     float: left;
     margin-left: 10px;
+}
+
+#skills .col-md-6 .col-xs-6 {
+    text-align: center
+}
+
+#skills .col-md-6 .col-xs-6 .plus-list {
+    display: inline-block;
+    text-align: left
 }
 
 /* ---------- PORTFOLIO ---------- */
