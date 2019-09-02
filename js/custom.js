@@ -22,10 +22,6 @@ $(document).ready(function(){
     // If Browser is mobile device
     var browser_device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
 
-    if (browser_device) {
-        $('.download-game').hide();
-    }
-
     // Hamburger slide toggle
     $('#hamburger').click(function(e){
         e.preventDefault();
